@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 import {
   BrowserRouter as Router,
-  Route,Switch,
+  Route, Switch,
   HashRouter,
 } from "react-router-dom";
 import App from "../InitialPage/App";
@@ -21,15 +21,15 @@ import RightSideBar from "../components/rightSidebar";
 
 const MainApp = () => {
 
-const config = '/template/react'
-  return(
+  const config = '/template/react'
+  return (
     <Router basename={`${config}`}>
-    <RightSideBar />
-    <Switch>
-      <Route path="/" component={App} />
-    </Switch>
-  </Router>
+      {/* <RightSideBar /> */}
+      <Switch>
+        <Route path="/" component={App} />
+      </Switch>
+    </Router>
   )
-  }
+}
 
 export default MainApp;
